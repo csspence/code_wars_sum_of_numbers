@@ -12,7 +12,20 @@ GetSum(-1, 0) == -1 // -1 + 0 = -1
 GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
 */
 
-function getSum( a,b )
-{
-   //Good luck!
+const getSum = ( a,b ) => {
+   let sum = 0;
+   let start;
+   let end;
+   if(a > b) {
+      start = b;
+      end = a;
+   } else {
+      start = a;
+      end = b;
+   }
+   for(let i = start; i < end + 1; i++) {
+      sum += i;
+   }
+
+   return sum;
 }
